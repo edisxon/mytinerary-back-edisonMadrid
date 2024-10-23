@@ -6,7 +6,7 @@ import {createCity, createManyCities} from "../controllers/cities/create.js";
 const router = Router();
 
 router.get("/all", allCities)
-router.get("/name/:name", citiesByName)
+router.get("/id/:id", citiesByName)
 router.post("/create", createCity)
 router.post("/createMany", createManyCities)
 

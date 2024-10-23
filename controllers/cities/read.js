@@ -23,8 +23,8 @@ const allCities = async (req, res, next) => {
 
 const citiesByName = async (req, res, next) => {
     try {
-        const name = req.params.name
-        const cities = await City.find({ name: name });
+        const _id = req.params.id
+        const cities = await City.find({ _id: _id });
         res.status(200).json({
             response: cities
         })
