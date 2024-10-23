@@ -3,7 +3,15 @@ import City from "../../models/City.js";
 
 const allCities = async (req, res, next) => {
     try {
-        const cities = await City.find();
+
+        let {name} = req.query
+        let query = {}
+
+        if (name) {
+            query.name = {$regex: `^${name}`, $options: "i"}
+        }
+
+        const cities = await City.find(query);
         res.status(200).json({
             response: cities
         })
