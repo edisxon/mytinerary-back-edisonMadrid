@@ -1,20 +1,20 @@
-import City from "../../models/City.js";
+import User from "../../models/User.js";
 
 const deleteOneByName = async (req, res, next) => {
     try {
-        
-        const city = await City.findOne({name: req.body.name});
-        if (!city) {
+
+        const user = await User.findOne({name: req.body.name});
+        if (!user) {
             return res.status(404).json({
-                message: "City not found. Please try another name."
+                message: "user not found. Please try another name"
             });
         }
 
-        let deleteCity = await City.deleteOne({
+        let deleteUser = await User.deleteOne({
             name: req.body.name
         })
         return res.status(200).json({
-            response: deleteCity
+            response: deleteUser
         })
     } catch (error) {
         next(error);

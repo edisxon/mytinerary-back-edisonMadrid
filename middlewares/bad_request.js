@@ -7,7 +7,7 @@ const bad_request = (error, req, res, next) => {
             message: "error, try another approach"
         })
     }
-    next(error)
+    return next(error)
 }
 
 export default bad_request

@@ -19,6 +19,4 @@ router.delete("/deleteOneByName", deleteOneByName)
 
 
 
-
-
 export default router

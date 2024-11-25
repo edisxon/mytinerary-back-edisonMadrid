@@ -1,5 +1,4 @@
 import Itinerary from "../../models/Itinerary.js";
-import "../../models/City.js"
 
 const allItineraries = async (req, res, next) => {
     try {
