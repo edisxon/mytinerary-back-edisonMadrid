@@ -8,7 +8,8 @@ const userSchema = new Schema({
     photo: {type: String},
     phone: {type: Number, trim: true},
     password: {type: String, required: true,},
-    online: {type: Boolean, default: false}
+    online: {type: Boolean, default: false},
+    country: {type: String, trim: true},
 }, {
     timestamps: true,
 })
